@@ -1,0 +1,311 @@
+/* ===== Hero styles (paste or merge) ===== */
+
+/* Optional: add these variables near the top of your CSS if not present */
+:root {
+  --blue-600: #2563eb;
+  --blue-700: #1e40af;
+  --indigo-800: #3730a3;
+  --blue-100: #e6f0ff;
+  --white: #ffffff;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 420px;
+  padding: 6rem 1rem 4.5rem;
+  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 40%, var(--indigo-800) 100%);
+  color: var(--white);
+}
+
+/* subtle overlay like in your TSX */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+/* content wrapper to sit above overlay */
+.hero-inner {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+/* logo + h1 layout */
+.logo-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.logo-wrap {
+  background: var(--white);
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(2,6,23,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* headings & text */
+.hero h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--white);
+}
+
+.tagline {
+  color: var(--blue-100);
+  font-size: 1.125rem;
+  margin: 1rem auto 0.75rem;
+  max-width: 60ch;
+}
+
+.hero-title {
+  margin: 1.25rem auto 1rem;
+  color: var(--white);
+  font-size: 1.6rem;
+  max-width: 70ch;
+}
+
+.lead {
+  color: var(--blue-100);
+  max-width: 56ch;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+}
+
+/* CTA button */
+.btn-primary {
+  display: inline-block;
+  background: var(--white);
+  color: var(--blue-600);
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(2,6,23,0.15);
+  border: 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+.btn-primary:hover { opacity: 0.95; transform: translateY(-1px); }
+
+/* wave */
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  line-height: 0;
+  pointer-events: none;
+}
+.wave svg { display: block; width: 100%; height: auto; min-height: 80px; }
+
+/* small screens */
+@media (max-width: 640px) {
+  .hero { padding: 3.5rem 1rem 3rem; min-height: 380px; }
+  .hero h1 { font-size: 2.1rem; }
+  .hero-title { font-size: 1.25rem; }
+  .hero-logo { width: 48px; height: 48px; }
+}
+
+/* Features section styles */
+.features-section {
+  padding: 5rem 1rem;
+  background: #f9fafb; /* light gray background */
+  color: #0f172a;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Intro */
+.features-intro { margin-bottom: 2.5rem; text-align: center; max-width: 820px; margin-left: auto; margin-right: auto; }
+.features-subtitle { color: #2563eb; margin: 0; font-weight: 700; text-align: center; }
+.features-title { font-size: 2.25rem; margin: 0.5rem auto 1rem; color: #0f172a; text-align: center; }
+.features-lead { color: #475569; max-width: 54ch; margin: 0 auto; text-align: center; }
+
+/* Grid */
+.features-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Feature card */
+.feature-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.05);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.feature-card:hover {
+  box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+  transform: translateY(-4px);
+}
+.feature-icon {
+  width: fit-content;
+  background: #e6f0ff; /* blue-100 */
+  padding: 0.6rem;
+  border-radius: 12px;
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  color: #2563eb; /* blue-600 */
+}
+.icon-svg { width: 20px; height: 20px; display:block; stroke: currentColor; fill: none; }
+
+/* Titles and text */
+.feature-title { margin: 0 0 0.5rem; font-size: 1.05rem; color: #0f172a; }
+.feature-desc { margin: 0; color: #475569; font-size: 0.95rem; }
+
+/* App preview */
+.app-preview {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #2563eb 0%, #3730a3 100%);
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+}
+.app-preview-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  .app-preview-inner { grid-template-columns: 1fr 1fr; padding: 2.5rem; }
+}
+.app-preview-text { padding: 0.25rem 1rem; }
+.app-preview-title { font-size: 1.5rem; margin: 0 0 0.5rem; }
+.app-preview-lead { color: rgba(236, 245, 255, 0.9); margin-bottom: 0.75rem; }
+.app-preview-list { list-style: none; padding: 0; margin: 0; color: #e6f0ff; }
+.app-preview-list li { display:flex; gap:0.75rem; align-items:center; margin-bottom: 0.5rem; }
+
+/* Image */
+.app-preview-image { display:flex; justify-content:center; padding: 0.75rem; }
+.preview-img { width:100%; max-width:360px; border-radius: 14px; box-shadow: 0 18px 40px rgba(2,6,23,0.18); object-fit: cover; }
+
+/* Small screens */
+@media (max-width: 640px) {
+  .features-title { font-size: 1.5rem; }
+  .feature-title { font-size: 1rem; }
+  .preview-img { max-width: 280px; }
+}
+
+/* Beta signup styles */
+.beta-signup { padding: 4.5rem 1rem; background: #ffffff; color: #0f172a; }
+.beta-signup .container { max-width: 720px; margin: 0 auto; padding: 0 1rem; }
+.signup-inner { position: relative; }
+.signup-title { font-size: 2rem; margin-bottom: 0.5rem; color: #0f172a; }
+.signup-lead { color: #6b7280; margin-bottom: 1.25rem; }
+
+/* Form */
+.signup-form { background:#f8fafc; padding: 1.25rem; border-radius: 12px; display:block; gap:1rem; }
+.form-row { margin-bottom: 0.75rem; display:flex; flex-direction:column; gap:0.5rem; }
+.form-row label { font-weight:600; font-size:0.95rem; color:#111827; }
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  font-size: 0.95rem;
+  width:100%;
+  background:white;
+}
+
+/* Radio/checkbox fieldsets */
+.signup-form fieldset { border:0; padding:0; margin:0 0 0.75rem 0; }
+.signup-form legend { font-weight:600; margin-bottom:0.5rem; color:#111827; }
+.signup-form label > input { margin-right:0.5rem; }
+
+/* Buttons */
+.btn-primary.btn-full { width:100%; padding: 0.9rem 1rem; border-radius:10px; background:#2563eb; color:white; border:0; font-weight:700; cursor:pointer; }
+.btn-outline { padding:0.6rem 1rem; border-radius:8px; background:white; border:1px solid #cbd5e1; cursor:pointer; }
+
+/* Privacy note */
+.privacy-note { color:#6b7280; font-size:0.9rem; text-align:center; margin-top:0.5rem; }
+
+/* Success card */
+.signup-success { display:flex; justify-content:center; margin-top:1rem; }
+.success-card { background:#ecfdf5; border:2px solid #bbf7d0; padding:1.25rem; border-radius:12px; text-align:center; }
+.success-icon { width:64px; height:64px; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; background:#bbf7d0; border-radius:999px; color:#059669; }
+
+/* FAQ styles */
+.faq-section { padding: 4.5rem 1rem; background: #f8fafc; color: #0f172a; }
+.faq-section .container { max-width: 840px; margin: 0 auto; padding: 0 1rem; }
+.faq-title { font-size: 2.25rem; margin-bottom: 0.5rem; }
+.faq-lead { color: #6b7280; margin-bottom: 1.5rem; font-size: 1rem; }
+
+/* Items */
+.faq-list { display:flex; flex-direction:column; gap:1rem; }
+.faq-item { background:#fff; border:1px solid #e6e6e6; border-radius:12px; overflow:hidden; }
+.faq-question {
+  appearance:none;
+  -webkit-appearance:none;
+  background:transparent;
+  border:0;
+  width:100%;
+  text-align:left;
+  padding:1rem 1.25rem;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.faq-question:hover { background:#fbfdff; }
+.faq-chevron { font-weight:700; transform-origin:center; transition: transform 200ms ease; }
+
+/* Answer panel */
+.faq-answer { padding:0 1.25rem 1rem 1.25rem; color:#475569; font-size:0.975rem; }
+
+/* Open state */
+.faq-item.open .faq-question { background:#ffffff; }
+.faq-item.open .faq-chevron { transform: rotate(45deg); }
+.faq-item.open .faq-answer { display:block; }
+
+/* Hidden by default */
+.faq-answer[hidden] { display:none; }
+
+/* Responsive */
+@media (max-width:640px) {
+  .faq-section { padding: 3rem 1rem; }
+  .faq-title { font-size:1.5rem; }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spot – Your Smart Location Companion</title>
+  <link rel="stylesheet" href="landing-page.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="logo-heading" aria-hidden="false">
+        <div class="logo-wrap" aria-hidden="true">
+          <img src="../images/spot_logo.PNG" alt="Spot logo" class="hero-logo" />
+        </div>
+        <h1>Spot</h1>
+      </div>
+
+      <p class="tagline">Never Circle the Block Again</p>
+
+      <h2 class="hero-title">Find, Share, and Navigate to Parking Spaces in Real-Time</h2>
+
+      <p class="lead">
+        The ultimate parking companion that combines smart navigation with crowd-sourced parking data to get you parked faster.
+      </p>
+
+      <button class="btn-primary" id="getStartedBtn">Join the Beta</button>
+    </div>
+
+    <!-- Decorative wave (white) -->
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#fff"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="features-intro text-center">
+        <h3 class="features-subtitle">How It Works</h3>
+        <h2 id="features-heading" class="features-title">Everything You Need to Park Smarter</h2>
+        <p class="features-lead">Spot combines the best of navigation and parking discovery in one powerful app</p>
+      </div>
+
+      <!-- Features grid -->
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="icon-svg">
+              <circle cx="11" cy="11" r="6" stroke-width="2"></circle>
+              <path d="M21 21l-4.35-4.35" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Smart Search</h4>
+          <p class="feature-desc">Search any location or use your current position to find available parking spaces nearby.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon-svg" fill="none" stroke="currentColor">
+              <path d="M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke-width="2"></path>
+              <path d="M12 2c2.8 0 5 2 5 4.8 0 4.9-5 8.2-5 14.2 0-6-5-9.3-5-14.2C7 4 9.2 2 12 2z" stroke-width="0" fill="currentColor" opacity="0.9"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Add Parking Spots</h4>
+          <p class="feature-desc">Help the community by dropping pins for parking garages and lots, or draw street parking zones.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon-svg" fill="none" stroke="currentColor">
+              <path d="M4 6h16M10 12h4M6 18h12" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Filter by Type</h4>
+          <p class="feature-desc">Quickly filter between garages, street parking, and lots to find exactly what you need.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon-svg" fill="none" stroke="currentColor">
+              <path d="M12 2l7 20-7-4-7 4 7-20z" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Real-Time Navigation</h4>
+          <p class="feature-desc">Get turn-by-turn directions to your chosen parking spot, just like Waze.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon-svg" fill="none" stroke="currentColor">
+              <path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3z" stroke-width="1.6"></path>
+              <path d="M2 20c0-3 3-5 6-5h8c3 0 6 2 6 5" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Community-Powered</h4>
+          <p class="feature-desc">Benefit from real-time updates from other drivers about parking availability and pricing.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon-svg" fill="none" stroke="currentColor">
+              <path d="M12 20l9-9-5-5-9 9v5h5z" stroke-width="1.6"></path>
+              <path d="M18 2l4 4" stroke-width="1.6"></path>
+            </svg>
+          </div>
+          <h4 class="feature-title">Draw Parking Zones</h4>
+          <p class="feature-desc">Easily mark street parking areas by drawing directly on the map interface.</p>
+        </article>
+      </div>
+
+      <!-- App Preview block -->
+      <div class="app-preview">
+        <div class="app-preview-inner">
+          <div class="app-preview-text">
+            <h4 class="app-preview-title">See It In Action</h4>
+            <p class="app-preview-lead">Our intuitive interface makes finding and adding parking spots effortless. Join thousands of early adopters who are already parking smarter.</p>
+            <ul class="app-preview-list">
+              <li>Available for iOS and Android</li>
+              <li>Free during beta period</li>
+              <li>Regular updates and improvements</li>
+            </ul>
+          </div>
+
+          <div class="app-preview-image">
+            <img src="https://images.unsplash.com/photo-1629697776809-f37ceac39e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MXx8fHwxNzU5OTU0MTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Spot app interface mockup" class="preview-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beta Signup -->
+  <section id="signup" class="beta-signup">
+    <div class="container">
+      <div class="signup-inner">
+        <div class="signup-intro text-center">
+          <h2 class="signup-title">Join the Beta Program</h2>
+          <p class="signup-lead">Be among the first to experience the future of parking. Help us shape Spot by sharing your feedback!</p>
+        </div>
+
+        <form id="betaForm" class="signup-form" novalidate>
+          <div class="form-row">
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" type="text" required placeholder="John Doe" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" required placeholder="john@example.com" />
+          </div>
+
+          <div class="form-row">
+            <label for="city">City *</label>
+            <input id="city" name="city" type="text" required placeholder="San Francisco, CA" />
+          </div>
+
+          <fieldset class="form-row">
+            <legend>How often do you search for parking? *</legend>
+            <label><input type="radio" name="parkingFrequency" value="daily" required /> Daily</label>
+            <label><input type="radio" name="parkingFrequency" value="weekly" /> Several times a week</label>
+            <label><input type="radio" name="parkingFrequency" value="monthly" /> A few times a month</label>
+            <label><input type="radio" name="parkingFrequency" value="rarely" /> Rarely</label>
+          </fieldset>
+
+          <fieldset class="form-row">
+            <legend>What will you primarily use Spot for? (Select all that apply)</legend>
+            <label><input type="checkbox" name="primaryUse" value="commute" /> Daily commute</label>
+            <label><input type="checkbox" name="primaryUse" value="shopping" /> Shopping and errands</label>
+            <label><input type="checkbox" name="primaryUse" value="events" /> Events and entertainment</label>
+            <label><input type="checkbox" name="primaryUse" value="travel" /> Travel and exploration</label>
+            <label><input type="checkbox" name="primaryUse" value="work" /> Work-related parking</label>
+          </fieldset>
+
+          <div class="form-row">
+            <label for="feedback">What's your biggest challenge with finding parking?</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Share your parking frustrations with us..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Sign Up for Beta Access</button>
+
+          <p class="privacy-note">We respect your privacy. Your information will only be used for the beta program.</p>
+        </form>
+
+        <!-- Success message (hidden until submit) -->
+        <div id="signupSuccess" class="signup-success" hidden>
+          <div class="success-card">
+            <div class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <h3>You're In!</h3>
+            <p>Thanks for joining the Spot beta program. We'll send you an email with next steps soon.</p>
+            <button id="signupAgain" class="btn-outline">Submit Another Response</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 id="faq-heading" class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-lead">Everything you need to know about Spot</p>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <!-- FAQ items will be rendered here by the script -->
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // CTA button scrolls to signup
+    document.getElementById('getStartedBtn')?.addEventListener('click', function(){
+      document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Beta form handling
+    (function(){
+      const form = document.getElementById('betaForm');
+      const success = document.getElementById('signupSuccess');
+      const signupAgain = document.getElementById('signupAgain');
+      if (form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+
+          // collect data
+          const fd = new FormData(form);
+          const data = {};
+          for (const [k,v] of fd.entries()) {
+            if (data[k]) {
+              if (!Array.isArray(data[k])) data[k] = [data[k]];
+              data[k].push(v);
+            } else data[k] = v;
+          }
+          console.log('Beta signup:', data);
+
+          // show success UI
+          form.hidden = true;
+          if (success) success.hidden = false;
+        });
+      }
+      if (signupAgain) signupAgain.addEventListener('click', function(){
+        form.reset(); form.hidden = false; success.hidden = true;
+      });
+    })();
+
+    // FAQ data and renderer (inline; replace with fetch('data/faqs.json') if preferred)
+    (function(){
+      const faqs = [
+        { question: "What is Spot?", answer: "Spot is a mobile app that helps you find, share, and navigate to parking spaces in real-time. We combine smart navigation (like Waze) with comprehensive parking data (like Parkopedia) to help you park faster and easier." },
+        { question: "How does Spot work?", answer: "Simply search for your destination or use your current location to find nearby parking. Filter by type (garage, street, or lot), see real-time availability, and get turn-by-turn directions. You can also contribute by adding new parking spots or updating existing ones." },
+        { question: "Is Spot free?", answer: "Yes! Spot is completely free during our beta period. We're focused on building the best parking experience possible with help from our community of beta testers." },
+        { question: "How can I add parking spots to the map?", answer: "Adding parking is easy! You can drop a pin for garages and lots, or use our drawing tool to mark street parking zones. Your contributions help other drivers and make Spot better for everyone." },
+        { question: "What types of parking can I find on Spot?", answer: "Spot shows three main types of parking: parking garages (covered multi-level facilities), street parking (on-street metered or free spots), and parking lots (open-air parking areas). You can filter by type to find exactly what you need." },
+        { question: "When will Spot be available?", answer: "We're currently in beta testing and working hard to launch soon! Beta testers will get early access to the app before our public release. Sign up above to join the beta program." },
+        { question: "Which cities does Spot support?", answer: "We're starting with major metropolitan areas and expanding based on beta tester feedback. During signup, let us know your city so we can prioritize coverage in your area." },
+        { question: "How accurate is the parking information?", answer: "Spot uses crowd-sourced data from our community of users, combined with official parking databases. The more people use Spot, the more accurate and up-to-date our information becomes. Real-time updates ensure you always have the latest information." },
+        { question: "Will my parking contributions be verified?", answer: "Yes! We use a combination of automated validation and community reporting to ensure parking data is accurate. Users can report issues or confirm parking spots, creating a self-regulating community." },
+        { question: "What platforms will Spot be available on?", answer: "Spot will be available on both iOS and Android. Beta testers will receive download links for their preferred platform when we launch." }
+      ];
+
+      const container = document.getElementById('faqList');
+      if (!container) return;
+
+      faqs.forEach((faq, idx) => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+
+        const id = `faq${idx+1}`;
+        const btn = document.createElement('button');
+        btn.className = 'faq-question';
+        btn.type = 'button';
+        btn.id = `${id}-btn`;
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-controls', id);
+        btn.innerHTML = `${faq.question} <span class="faq-chevron" aria-hidden="true">+</span>`;
+
+        const answer = document.createElement('div');
+        answer.className = 'faq-answer';
+        answer.id = id;
+        answer.setAttribute('role', 'region');
+        answer.setAttribute('aria-labelledby', `${id}-btn`);
+        answer.hidden = true;
+        answer.innerText = faq.answer;
+
+        item.appendChild(btn);
+        item.appendChild(answer);
+        container.appendChild(item);
+      });
+
+      // single-collapsible behavior
+      container.addEventListener('click', function(e){
+        const btn = e.target.closest('.faq-question');
+        if (!btn) return;
+        const item = btn.closest('.faq-item');
+        const answerId = btn.getAttribute('aria-controls');
+        const answer = document.getElementById(answerId);
+        const isOpen = item.classList.contains('open');
+
+        // close others
+        Array.from(container.querySelectorAll('.faq-item.open')).forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            const openBtn = openItem.querySelector('.faq-question');
+            const openAnswer = openItem.querySelector('.faq-answer');
+            if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+            if (openAnswer) openAnswer.hidden = true;
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          if (answer) answer.hidden = true;
+        } else {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          if (answer) answer.hidden = false;
+        }
+      });
+
+    })();
+  </script>
+
+</body>
