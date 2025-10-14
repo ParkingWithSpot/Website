@@ -172,21 +172,61 @@
           <p class="privacy-note">We respect your privacy. Your information will only be used for feedback, updates and early access.</p>
         </form>
 
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" style="
+          display: none;
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(255, 255, 255, 0.85);
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          font-family: system-ui, sans-serif;
+          color: #333;
+        ">
+          <div class="spinner" style="
+            border: 4px solid #eee;
+            border-top: 4px solid #007BFF;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+          "></div>
+          <p style="margin-top: 12px; font-size: 1rem;">Submitting your response...</p>
+        </div>
+
         <script>
           const scriptURL = 'https://script.google.com/macros/s/AKfycbyDA_r8Icw-vsoQCcMJgOc7H0EXSBMRJIQAY2_M0pGyOuNEkZxo-WJrd9ebnwMSc9L4/exec';
           const form = document.getElementById('waitlist-form');
+          const overlay = document.getElementById('loading-overlay');
 
           form.addEventListener('submit', e => {
             e.preventDefault();
+            overlay.style.display = 'flex'; // show loading
             const data = Object.fromEntries(new FormData(form));
+
             fetch(scriptURL, { method: 'POST', body: JSON.stringify(data) })
               .then(() => {
+                overlay.style.display = 'none'; // hide loading
                 alert("Thanks for joining the Spot beta program. We'll send you an email with next steps soon.");
                 form.reset();
               })
-              .catch(err => console.error('Error:', err));
+              .catch(err => {
+                overlay.style.display = 'none'; // hide loading even if error
+                alert("Oops! Something went wrong. Please try again.");
+                console.error('Error:', err);
+              });
           });
         </script>
+
+        <!-- Spinner Animation -->
+        <style>
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        </style>
+
       </div>
     </div>
   </section>
